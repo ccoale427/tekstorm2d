@@ -38,3 +38,16 @@ Sound
 This provides an implementation of a sound engine (i.e. SoundEffect, Song, etc.)
 
 
+Scene
+----
+This provides an implementation of scene management classes.
+
+Resources
+----
+This provides a method for implementing resource management.
+
+Graphics
+----
+This provides an implementation of OpenGL for rendering.
+
+
