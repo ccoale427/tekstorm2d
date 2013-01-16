@@ -1,0 +1,40 @@
+Tekstorm2D is a 2D cross-platform game engine written in C++.
+
+It is designed to be a simple, easy-to-use, yet powerful game engine that can be used to create a variety of different game styles, ranging from simple arcade games to MMO games.
+
+
+The game engine is split into different "systems" that provide different
+functionality (some of which aren't required) to the user (the game):
+
+Core-
+---
+The Core system contains all of the core functionality, data types, various functions, etc. As the name implies, it is the core that is used by all other systems.
+
+Networking
+-----
+The networking system contains classes for working with both low-level and high-level networks. It provides classes for low-level networking such as Socket. It also implements a high level gaming protocol known as MNP (proprietary).
+
+IO
+---
+The Input/Output system contains classes for working with generic streams,
+including file system streams, (networking streams implemented through networking system), memory streams, etc. Streams are the basis for all IO within the game engine.
+
+Scripting
+----
+The scripting system contains classes for loading, executing, and accessing scripts. The scripting language that is used will be squirrel. The scripting service contains implementation of all functionality of the game engine.
+
+Each system will have an implementation for registering itself with a script object.
+
+Math
+----
+The math system contains a large variety of math classes (Vector2, Vector3, Matrix3, Matrix4, etc.)
+
+Physics
+----
+The physics system contains an implementation of a physics engine (Box2D).
+
+Sound
+----
+This provides an implementation of a sound engine (i.e. SoundEffect, Song, etc.)
+
+
