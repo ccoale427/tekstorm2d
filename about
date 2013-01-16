@@ -3,6 +3,16 @@ Tekstorm2D is a 2D cross-platform game engine written in C++.
 It is designed to be a simple, easy-to-use, yet powerful game engine that can be used to create a variety of different game styles, ranging from simple arcade games to MMO games.
 
 
+
+
+External dependencies to use for the engine:
+Physics: Box2D
+Sound: (UD)
+Rendering: OpenGL, GLUT
+
+
+
+
 The game engine is split into different "systems" that provide different
 functionality (some of which aren't required) to the user (the game):
 
@@ -42,12 +52,14 @@ Scene
 ----
 This provides an implementation of scene management classes.
 
-Resources
+Content
 ----
 This provides a method for implementing resource management.
 
 Graphics
 ----
 This provides an implementation of OpenGL for rendering.
+
+
 
 
