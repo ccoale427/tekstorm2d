@@ -91,24 +91,20 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// forward declaration of standard namespaces
+namespace Tekstorm
+{
+	namespace Core {}
+	namespace Audio {}
+	namespace Content {}
+	namespace Graphics {}
+	namespace IO {}
+	namespace Math {}
+	namespace Physics {}
+	namespace Scene {}
+	namespace Scripting {}
+	namespace Networking {}
+}
 
 
 
