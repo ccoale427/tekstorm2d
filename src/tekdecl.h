@@ -90,6 +90,20 @@
 #ifndef _TEKSTORM_TEKDECL_H
 
 
+#if defined(_MSC_VER)
+	#if _MSC_VER >= 1600
+		#include <cstdint>
+		// int64_t exists for C++11 but not before
+	#else
+		typedef __int8 int8_t;
+		typedef __int16 int16_t;
+		typedef __int32 int32_t;
+		typedef __int64 int64_t;
+	#endif
+#else
+	#include <cstdint>
+#endif
+
 
 // forward declaration of standard namespaces
 namespace Tekstorm
