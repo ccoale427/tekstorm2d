@@ -5,7 +5,7 @@
 #pragma once
 #ifndef _TEKSTORM_MATH_VECTOR4_H
 #define _TEKSTORM_MATH_VECTOR4_H
-#include "../tekconfig.h"
+#include "../tekdecl.h"
 
 namespace Tekstorm
 {
