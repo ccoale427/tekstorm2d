@@ -5,7 +5,7 @@
 #pragma once
 #ifndef _TEKSTORM_MATH_COLOR3_H
 #define _TEKSTORM_MATH_COLOR3_H
-#include "../tekconfig.h"
+#include "../tekdecl.h"
 #include "Vector2.h"
 #include "Vector3.h"
 #include "Vector4.h"

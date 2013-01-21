@@ -8,10 +8,10 @@
 ** Since Doxygen is used for documentation generation, each header file should follow these quick rules for documentation:
 **
 ** A body documentation (i.e. documenting a function, variable, etc.) should use three slashes on 3 or more consecutive lines. For example:
-**	/// 
+**	///
 **	/// Hello, this is a description of my object.
 **	///
-** 
+**
 ** All descriptions of major bodies (classes, interfaces, functions, macros, and structures) should provide a brief and detailed description.
 ** The first sentence of each comment is automatically used as the brief. Be sure to keep this in mind when writing the description. For example:
 **
@@ -22,7 +22,7 @@
 **
 ** When documenting member variables (public or private), the following syntax should be used:
 **	int x; //!< The x-position of the object.
-** 
+**
 ** When documenting parameters of functions, the following tag should be used:
 ** 	\param x The x-position of the object.
 **
@@ -84,12 +84,42 @@
 **	If a constant is in a parameter or local variable, then it should follow rules 2 and 3 respectively.
 ** 8. Macros
 **	Macros should be in all caps. Example: #define MIN(x,y) (x < y ? x : y)
-** 
+**
 */
 #pragma once
 #ifndef _TEKSTORM_TEKDECL_H
 
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <stdexcept>
+#include <cmath>
+#include <cstring>
 
+#if defined(_MSC_VER)
+	#if _MSC_VER >= 1600
+		#include <stdint.h>
+		// int64_t exists for C++11 but not before
+	#else
+		typedef __int8 int8;
+		typedef __int16 int16;
+		typedef __int32 int32;
+		typedef __int64 int64;
+	#endif
+#else
+	typedef signed char int8;
+	typedef signed short int16;
+	typedef signed int int32;
+	typedef signed long long int int64;
+#endif
+
+#if defined (TEKSTORM_FASTMATH)
+typedef float tekreal;
+#else
+typedef double tekreal;
+#endif
+
+#define TEKAPI
 
 // forward declaration of standard namespaces
 namespace Tekstorm
